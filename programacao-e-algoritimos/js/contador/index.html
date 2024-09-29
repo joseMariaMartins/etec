@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Contador Plus</title>
+    <style>
+        body {
+            background-color: rgb(56, 56, 56);
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+         main {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 30px;
+        }
+
+        label {
+            margin: 10px;
+        }
+
+        input {
+            background-color: rgba(0, 0, 0, 0.295);
+            color: white;
+            height: 30px;
+            width: 300px;
+            border-radius: 7px;
+            border: none;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Super Contador</h1>
+            <label for="number"><input type="number" placeholder="Digite o inicio" id="inicio"></label>
+            <label for="number"><input type="number" placeholder="Digite o passo" id="passo"></label>
+            <label for="number"><input type="number" placeholder="Digite o fim" id="fim"></label>
+            <label for="button"><input type="button" value="Contar" onclick="contar()"></label>
+            <div id="result"></div>
+        </section>
+    </main>
+    <script>
+        function contar() {
+        var inicio = Number(document.getElementById("inicio").value)
+        var passo = Number(document.getElementById("passo").value)
+        var fim = Number(document.getElementById("fim").value)
+
+        var res = document.getElementById("result")
+            res.innerHTML = ""
+
+        for( c = inicio; c <= fim; c += passo) {
+            res.innerHTML += c
+            if (c + passo > fim) {
+                res.innerHTML += "."
+            } else {
+                res.innerHTML += ", "
+            } 
+        }
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Gerador de Tabuada</title>
+    <style>
+        body {
+            background-color: rgb(56, 56, 56);
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+         main {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 30px;
+        }
+
+        label {
+            margin: 10px;
+        }
+
+        input {
+            background-color: rgba(0, 0, 0, 0.295);
+            color: white;
+            height: 30px;
+            width: 300px;
+            border-radius: 7px;
+            border: none;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Super Gerador de Tabuada</h1>
+            <label for="number"><input type="number" placeholder="Digite a tabuada" id="numero"></label>
+            <label for="number"><input type="number" placeholder="Digite até qual número" id="limite"></label>
+            <label for="button"><input type="button" value="Contar" onclick="contar()"></label>
+            <div id="result"></div>
+        </section>
+    </main>
+    <script>
+        function contar() {
+            var numero = Number(document.getElementById("numero").value)
+            var limite = Number(document.getElementById("limite").value)
+            var result = document.getElementById("result")  
+
+            result.innerHTML = "" 
+
+            for (i = 1; i <= limite; i++) {
+                result.innerHTML += `${numero} x ${i} = ${numero * i} <br>`
+            }
+        }
+    </script>
+</body>
+</html>

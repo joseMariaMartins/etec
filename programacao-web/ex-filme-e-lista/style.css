@@ -1,0 +1,78 @@
+body {
+    background-image: linear-gradient(120deg, black, rgb(255, 0, 43));
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    padding: 40px;
+    font-weight: bolder;
+    font-size: 35px;
+}
+
+h2 {
+    font-weight: bolder;
+    font-size: 26px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+input {
+    width: 600px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.416);
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 15px;
+    text-align: center;
+    color: white;
+    display: flex;
+}
+
+select {
+    width: 600px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.416);
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+}
+
+button {
+    height: 30px;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.416);
+    border: 1px solid black;
+    border-radius: 7px;
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+table {
+    border: 2px solid black;
+    height: 90%;
+    width: 90%;
+    background-color: rgba(0, 0, 0, 0.463);
+}
+
+td {
+    border: 2px solid black;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+}
+
+img {
+    height: 150px;
+    width: 100px;
+}
